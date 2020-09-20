@@ -1,0 +1,24 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "api/{url}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/Test/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "UseServiceDiscovery": true,
+      "ServiceName": "MyServiceA",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:6299",
+    "ServiceDiscoveryProvider": {
+      "Scheme": "http",
+      "Host": "192.168.31.59",
+      "Port": 8500,
+      "Type": "Consul"
+    }
+  }
+}
