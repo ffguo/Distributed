@@ -14,6 +14,7 @@ namespace TestService.Controllers
         [HttpGet]
         public string Get()
         {
+            Console.WriteLine("'Test'接口被调用");
             return Request.Host.Host + ":" + Request.Host.Port?.ToString();
         }
     }

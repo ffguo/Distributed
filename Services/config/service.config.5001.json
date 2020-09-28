@@ -1,7 +1,7 @@
 {
-  "ConsulAddress": "http://192.168.31.59:8500",
+  "ConsulAddress": "http://192.168.7.121:8500",
   "ServiceName": "MyServiceA",
   "HealthCheck": "/Health",
-  "IP": "192.168.31.59",
+  "IP": "192.168.7.121",
   "Port":  "5001"
 }
