@@ -1,0 +1,25 @@
+version: '3.3'
+services:
+
+  service1:
+    build:
+      context: Services/
+    image: service-a
+    ports:
+      - 5001:80/tcp
+    volumes:
+      - ./config/services/service.config.5001.json:/app/service.config.json
+  service2:
+    image: service-a
+    ports:
+      - 5002:80/tcp
+    command: ["dotnet", "/app/TestService.dll"]
+    volumes:
+      - ./config/services/service.config.5002.json:/app/service.config.json
+  service3:
+    image: service-a
+    ports:
+      - 5003:80/tcp
+    command: ["dotnet", "/app/TestService.dll"]
+    volumes:
+      - ./config/services/service.config.5003.json:/app/service.config.json
