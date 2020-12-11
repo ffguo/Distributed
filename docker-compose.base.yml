@@ -62,4 +62,8 @@ services:
       context: GateWays/
     image: ocelot
     ports:
-      - 5000:80/tcp
+      - 9001:80/tcp
+  ocelot1:
+    image: ocelot
+    ports:
+      - 9002:80/tcp
